@@ -66,11 +66,11 @@ const HeroContainer: NextPage<HeroContainerType> = ({ className = "" }) => {
                 }}
               />
               <div className="flex-1 flex flex-row items-center justify-start flex-wrap content-center py-0 pl-0 pr-2 box-border gap-x-[7px] gap-y-2.5 min-w-[462px] max-w-full mq800:min-w-full mq800:flex-[unset] mq800:self-stretch">
-                <div className="h-14 flex-1 min-w-[74px] gap-5 mq800:min-w-full">
+                <div className="h-14 flex-1 min-w-[74px] mq800:min-w-full">
                   <DatePicker
-                    value={checkInDatePickerDateTimePickerValue}
+                    value={checkOutDatePickerDateTimePickerValue}
                     onChange={(newValue: any) => {
-                      setCheckInDatePickerDateTimePickerValue(newValue);
+                      setCheckOutDatePickerDateTimePickerValue(newValue);
                     }}
                     sx={{
                       fieldset: {
@@ -106,11 +106,10 @@ const HeroContainer: NextPage<HeroContainerType> = ({ className = "" }) => {
                     slotProps={{
                       textField: {
                         size: "medium",
-                        fullWidth: false,
+                        fullWidth: true,
                         required: false,
                         autoFocus: false,
                         error: false,
-                        color: "primary",
                         placeholder: "Check-in",
                       },
                       openPickerIcon: {
